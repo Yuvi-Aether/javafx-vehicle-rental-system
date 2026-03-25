@@ -8,11 +8,13 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-public class Main extends Application{
-    public static void main(String []args){
+public class Main extends Application {
+
+    public static void main(String[] args) {
         launch(args);
     }
-    public  void start(Stage stage) throws Exception {
+
+    public void start(Stage stage) throws Exception {
         Parent Root = FXMLLoader.load(getClass().getResource("/Main.fxml"));
         Scene scene = new Scene(Root);
         String css = this.getClass().getResource("/application.css").toExternalForm();

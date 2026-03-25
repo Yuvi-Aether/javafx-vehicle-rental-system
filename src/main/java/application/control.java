@@ -14,6 +14,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class control {
+
     @FXML
     VBox vBox;
 
@@ -21,63 +22,60 @@ public class control {
     Stage stage;
     Scene scene;
 
-    
-    
     //access system
-
-@FXML
-     TextField Username;
-     @FXML
+    @FXML
+    TextField Username;
+    @FXML
     PasswordField Password;
     @FXML
     Label myLable;
 
-    public void login(ActionEvent e) throws Exception{
+    public void login(ActionEvent e) throws Exception {
         String user = Username.getText();
-        String pass  = Password.getText();
-        
+        String pass = Password.getText();
+
         LoginControl l = new LoginControl();
-        String s = l.Login(user,pass);
-        if(s.equals("Invalid Credentials")){myLable.setText(s);return;}
+        String s = l.Login(user, pass);
+        if (s.equals("Invalid Credentials")) {myLable.setText(s);return;}
 
-        if("admin".equals(s)){
+        if ("admin".equals(s)) {
             Root = FXMLLoader.load(getClass().getResource("/Admin.fxml"));
-            stage = (Stage)((Node) e.getSource()).getScene().getWindow();
+            stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
 
             scene = new Scene(Root);
 
-             stage.setScene(scene);
-        stage.setTitle("Admin Panel");
-        stage.getIcons().add(
-                new Image(getClass().getResource("/captain-puffy.jpg").toExternalForm())
-        );
+            stage.setScene(scene);
+            stage.setTitle("Admin Panel");
+            stage.getIcons().add(
+                    new Image(getClass().getResource("/captain-puffy.jpg").toExternalForm())
+            );
 
-        stage.setFullScreen(true);
-        stage.setFullScreenExitHint("");
-        stage.show();
-        }else{
+            stage.setFullScreen(true);
+            stage.setFullScreenExitHint("");
+            stage.show();
+        } else {
             Root = FXMLLoader.load(getClass().getResource("/User.fxml"));
-            stage = (Stage)((Node) e.getSource()).getScene().getWindow();
+            stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
 
             scene = new Scene(Root);
 
-             stage.setScene(scene);
-        stage.setTitle("User Panel");
-        stage.getIcons().add(
-                new Image(getClass().getResource("/captain-puffy.jpg").toExternalForm())
-        );
+            stage.setScene(scene);
+            stage.setTitle("User Panel");
+            stage.getIcons().add(
+                    new Image(getClass().getResource("/captain-puffy.jpg").toExternalForm())
+            );
 
-        stage.setFullScreen(true);
-        stage.setFullScreenExitHint("");
-        stage.show();
+            stage.setFullScreen(true);
+            stage.setFullScreenExitHint("");
+            stage.show();
         }
     }
-    
-    public void Next(ActionEvent e) throws Exception{
+
+    public void Next(ActionEvent e) throws Exception {
         Root = FXMLLoader.load(getClass().getResource("/Access.fxml"));
         String css = this.getClass().getResource("/application.css").toExternalForm();
 
-        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
 
         scene = new Scene(Root);
         scene.getStylesheets().add(css);
@@ -92,9 +90,10 @@ public class control {
         stage.setFullScreenExitHint("");
         stage.show();
     }
-    public void logout(ActionEvent e){
+
+    public void logout(ActionEvent e) {
         Root = vBox.getParent();
-        stage = (Stage)vBox.getScene().getWindow();
+        stage = (Stage) vBox.getScene().getWindow();
         stage.close();
 
     }
