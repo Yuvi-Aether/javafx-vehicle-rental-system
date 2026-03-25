@@ -39,6 +39,10 @@ public class control {
         LoginControl l = new LoginControl();
         String s = l.Login(user,pass);
         if(s.equals("Invalid Credentials")){myLable.setText(s);}
+
+        if(s.equals("Admin")){
+            
+        }
     }
     
     public void Next(ActionEvent e) throws Exception{
