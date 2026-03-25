@@ -32,7 +32,7 @@ public class control {
     @FXML
     Label myLable;
 
-    public void login(ActionEvent e){
+    public void login(ActionEvent e) throws Exception{
         String user = Username.getText();
         String pass  = Password.getText();
         
@@ -40,8 +40,21 @@ public class control {
         String s = l.Login(user,pass);
         if(s.equals("Invalid Credentials")){myLable.setText(s);}
 
-        if(s.equals("Admin")){
-            
+        if("admin".equalsIgnoreCase(s)){
+            Root = FXMLLoader.load(getClass().getResource("/Admin.fxml"));
+            stage = (Stage)((Node) e.getSource()).getScene().getWindow();
+
+            scene = new Scene(Root);
+
+             stage.setScene(scene);
+        stage.setTitle("Admin Panel");
+        stage.getIcons().add(
+                new Image(getClass().getResource("/captain-puffy.jpg").toExternalForm())
+        );
+
+        stage.setFullScreen(true);
+        stage.setFullScreenExitHint("");
+        stage.show();
         }
     }
     

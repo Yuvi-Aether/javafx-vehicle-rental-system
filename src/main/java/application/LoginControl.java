@@ -13,7 +13,7 @@ class LoginControl{
     public String Login(String username,String password){
             for (duck u : users) {
             if (u.user.equals(username) && u.pass.equals(password)) {
-                return "Login Successful: " + u.role;
+                return u.role;
             }
         }
         return "Invalid Credentials";
