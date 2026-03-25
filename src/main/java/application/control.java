@@ -38,9 +38,9 @@ public class control {
         
         LoginControl l = new LoginControl();
         String s = l.Login(user,pass);
-        if(s.equals("Invalid Credentials")){myLable.setText(s);}
+        if(s.equals("Invalid Credentials")){myLable.setText(s);return;}
 
-        if("admin".equalsIgnoreCase(s)){
+        if("admin".equals(s)){
             Root = FXMLLoader.load(getClass().getResource("/Admin.fxml"));
             stage = (Stage)((Node) e.getSource()).getScene().getWindow();
 
@@ -48,6 +48,21 @@ public class control {
 
              stage.setScene(scene);
         stage.setTitle("Admin Panel");
+        stage.getIcons().add(
+                new Image(getClass().getResource("/captain-puffy.jpg").toExternalForm())
+        );
+
+        stage.setFullScreen(true);
+        stage.setFullScreenExitHint("");
+        stage.show();
+        }else{
+            Root = FXMLLoader.load(getClass().getResource("/User.fxml"));
+            stage = (Stage)((Node) e.getSource()).getScene().getWindow();
+
+            scene = new Scene(Root);
+
+             stage.setScene(scene);
+        stage.setTitle("User Panel");
         stage.getIcons().add(
                 new Image(getClass().getResource("/captain-puffy.jpg").toExternalForm())
         );
