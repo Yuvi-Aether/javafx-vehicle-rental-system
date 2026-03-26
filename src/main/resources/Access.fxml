@@ -7,22 +7,23 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
 <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.control">
    <children>
-      <Label styleClass="title" fx:id="myLable" text="enter" />
-      <HBox prefHeight="27.0" prefWidth="600.0">
+      <Label fx:id="myLabel" styleClass="title" text="Enter Credentials :)" />
+      <HBox prefHeight="43.0" prefWidth="600.0" />
+      <HBox alignment="CENTER" prefHeight="27.0" prefWidth="600.0">
          <children>
-            <Label alignment="CENTER" styleClass="subtitle" text="Uesrname: " />
-            <TextField  alignment="CENTER" fx:id="Username" promptText="eg. admin" />
+            <Label alignment="CENTER" styleClass="subtitle" text="Username:                " />
+            <TextField fx:id="Username" alignment="CENTER" promptText="eg. admin" />
          </children>
       </HBox>
-      <HBox prefHeight="34.0" prefWidth="600.0">
+      <HBox alignment="CENTER" prefHeight="34.0" prefWidth="600.0">
          <children>
-            <Label alignment="CENTER" styleClass="subtitle" text="Password:  " />
-            <PasswordField alignment="CENTER" fx:id="Password" promptText="pass" />
+            <Label alignment="CENTER" styleClass="subtitle" text="Password:                 " />
+            <PasswordField fx:id="Password" alignment="CENTER" promptText="pass" />
          </children>
       </HBox>
-      <Button styleClass="mclaren-button" mnemonicParsing="false" onAction="#login" text="login" />
+      <HBox prefHeight="45.0" prefWidth="600.0" />
+      <Button mnemonicParsing="false" onAction="#login" styleClass="mclaren-button" text="login" />
    </children>
 </VBox>
