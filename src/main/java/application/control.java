@@ -101,7 +101,7 @@ public class control {
     public void logout(ActionEvent e) {
         Root = vBox.getParent();
         stage = (Stage) vBox.getScene().getWindow();
-        stage.close();
+        switchScene(e, "/Access.fxml", "Login Access", "/application.css");
 
     }
 }

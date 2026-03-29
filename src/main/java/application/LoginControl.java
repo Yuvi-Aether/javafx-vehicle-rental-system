@@ -4,32 +4,19 @@ import java.util.ArrayList;
 
 class LoginControl {
 
-    ArrayList<duck> users = new ArrayList<>();
+    ArrayList<Users> users = new ArrayList<>();
 
     public LoginControl() {
-        users.add(new duck("admin", "123", "admin"));
-        users.add(new duck("user", "123", "user"));
+        users.add(new Users("admin", "123", "admin", "Admin User"));
+        users.add(new Users("user", "123", "user", "Regular User"));
     }
 
     public String Login(String username, String password) {
-        for (duck u : users) {
-            if (u.user.equals(username) && u.pass.equals(password)) {
+        for (Users u : users) {
+            if (u.username.equals(username) && u.password.equals(password)) {
                 return u.role;
             }
         }
         return "Invalid Credentials";
-    }
-}
-
-class duck {
-
-    String user;
-    String pass;
-    String role;
-
-    duck(String u, String p, String r) {
-        this.user = u;
-        this.pass = p;
-        this.role = r;
     }
 }
