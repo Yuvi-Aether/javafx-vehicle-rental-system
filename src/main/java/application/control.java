@@ -86,10 +86,10 @@ public class control {
 
         if ("admin".equals(Role)) {
 
-            switchScene(e, "/Admin.fxml", "Admin Panel", null);
+            switchScene(e, "/Admin.fxml", "Admin Panel", "/application.css");
         } else {
 
-            switchScene(e, "/User.fxml", "User Panel", null);
+            switchScene(e, "/User.fxml", "User Panel", "/application.css");
         }
     }
 
