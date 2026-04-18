@@ -4,10 +4,9 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
 
-
-<VBox alignment="CENTER" styleClass="root" fx:id="vBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.control">
+<VBox fx:id="vBox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="root" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UserPanel">
    <children>
-      <Label styleClass="title" text="Wellcome, user" />
-      <Button styleClass="mclaren-button" mnemonicParsing="false" onAction="#logout" text="logout" />
+      <Label fx:id="uLable" styleClass="title" text="Wellcome, user" />
+      <Button mnemonicParsing="false" onAction="#logout" styleClass="mclaren-button" text="logout" />
    </children>
 </VBox>

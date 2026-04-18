@@ -81,15 +81,17 @@ public class control {
         String pass = Password.getText();
 
         LoginControl log = new LoginControl();
-        String Role = log.Login(user, pass);
-        if (Role.equals("Invalid Credentials")) {myLabel.setText(Role);return;}
+        Users Role = log.Login(user, pass);
+        if (Role == null) {myLabel.setText("Invalid Credentials");return;}
+        Session.currentUser = Role;
 
-        if ("admin".equals(Role)) {
+        if ("admin".equals(Role.role)) {
 
             switchScene(e, "/Admin.fxml", "Admin Panel", "/application.css");
         } else {
 
             switchScene(e, "/User.fxml", "User Panel", "/application.css");
+
         }
     }
 

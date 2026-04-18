@@ -11,12 +11,12 @@ class LoginControl {
         users.add(new Users("user", "123", "user", "Regular User"));
     }
 
-    public String Login(String username, String password) {
+    public Users Login(String username, String password) {
         for (Users u : users) {
             if (u.username.equals(username) && u.password.equals(password)) {
-                return u.role;
+                return u;
             }
         }
-        return "Invalid Credentials";
+        return null;
     }
 }

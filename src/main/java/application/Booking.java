@@ -16,4 +16,5 @@ class Booking{
         this.totalPrice = p;
         this.status = st;
     }
+    
 }
