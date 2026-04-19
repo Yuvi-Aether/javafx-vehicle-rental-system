@@ -1,6 +1,7 @@
 package application;
 
 class Car {
+
     String id;
     String model;
     int pricePerDay;
