@@ -14,7 +14,7 @@
       <HBox alignment="CENTER" prefHeight="27.0" prefWidth="600.0">
          <children>
             <Label alignment="CENTER" styleClass="subtitle" text="Username:                " />
-            <TextField fx:id="Username" alignment="CENTER" promptText="eg. admin" />
+            <TextField fx:id="Username" styleClass="text-field" alignment="CENTER" promptText="eg. admin" />
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="34.0" prefWidth="600.0">

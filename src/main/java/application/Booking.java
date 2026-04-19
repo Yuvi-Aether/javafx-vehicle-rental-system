@@ -1,20 +1,17 @@
 package application;
 
-class Booking{
-    String username;
-    String vehicleId;
-    String startDate;
-    String endDate;
-    int    totalPrice;
-    String status;
+import java.time.LocalDate;
 
-    Booking(String u, String v, String s, String e, int p, String st){
-        this.username = u;
-        this.vehicleId = v;
-        this.startDate = s;
-        this.endDate = e;
-        this.totalPrice = p;
-        this.status = st;
-    }
+class Booking{
+  
+    static String username;
+    static String vehicleId;
+    static LocalDate startDate;
+    static LocalDate endDate;
+    static int    totalPrice;
+    static String status;
+    static String VehicleName;
+    static int priceperday;
+    
     
 }

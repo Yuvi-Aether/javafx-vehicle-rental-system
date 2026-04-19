@@ -29,9 +29,72 @@ class Vehicles implements Rental {
     }
     
     @Override
-    public void CheckAvailability() {}
+    public String CheckAvailability(String status) {
+        if (status.equals("Available")) {
+            System.out.println("Item is available for rent.");
+            return "Available";
+        } else {
+            System.out.println("Item is currently booked.");
+            return "Booked";
+        }
+    }
 
     @Override
-    public void RentItem() {}
+    public void RentItem(String id) {
+        for(Truck truck : trucks){
+            if(truck.id.equals(id)){
+                if(truck.status.equals("Booked")){
+                    System.out.println("Sorry, this item is currently booked.");
+                    return;
+                }
+                truck.status = "Booked";
+                return;
+            }
+        }
+        for(Car car : cars){
+            if(car.id.equals(id)){
+                if(car.status.equals("Booked")){
+                    System.out.println("Sorry, this item is currently booked.");
+                    return;
+                }
+                car.status = "Booked";
+                return;
+            }
+        }
+        for(Bike bike : Bikes){
+            if(bike.id.equals(id)){
+                if(bike.status.equals("Booked")){
+                    System.out.println("Sorry, this item is currently booked.");
+                    return;
+                }
+                bike.status = "Booked";
+                return;
+            }
+        }
+
+    }
+
+    public void ReturnItem(String id) {
+        for (Truck truck : trucks) {
+            if (truck.id.equals(id)) {
+                truck.status = "Available";
+                return;
+            }
+        }
+
+        for (Car car : cars) {
+            if (car.id.equals(id)) {
+                car.status = "Available";
+                return;
+            }
+        }
+
+        for (Bike bike : Bikes) {
+            if (bike.id.equals(id)) {
+                bike.status = "Available";
+                return;
+            }
+        }
+    }
 
 }

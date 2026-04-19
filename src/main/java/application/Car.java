@@ -1,7 +1,7 @@
 package application;
 
 class Car {
-    int id;
+    String id;
     String model;
     int pricePerDay;
     String status;
@@ -9,7 +9,7 @@ class Car {
     Car(String m, String p, String s, String i) {
         this.model = m;
         this.pricePerDay = Integer.parseInt(p);
-        this.id = Integer.parseInt(i);
+        this.id = i;
         this.status = s;
     }
 }
