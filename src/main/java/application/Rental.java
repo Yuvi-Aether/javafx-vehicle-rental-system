@@ -1,5 +1,5 @@
 package application;
 public interface Rental{
-    public void CheckAvailability();
-    public void RentItem();
+    public String CheckAvailability(String status);
+    public void RentItem(String id);
 }
