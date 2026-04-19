@@ -50,7 +50,9 @@ public class UserPanel extends control {
 
         String selected = Choice.getValue();
 
-        if (selected == null) return;
+        if (selected == null) {
+            return;
+        }
 
         switch (selected) {
 
