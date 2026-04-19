@@ -1,8 +1,7 @@
 package application;
 
 public class Bike {
-
-    String id;
+     String id;
     String model;
     int pricePerDay;
     String status;

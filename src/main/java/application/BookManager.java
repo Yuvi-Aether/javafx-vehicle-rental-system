@@ -1,5 +1,6 @@
 package application;
 
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -9,7 +10,6 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class BookManager {
-
     @FXML
     Label bLabel;
     @FXML
@@ -75,8 +75,7 @@ public class BookManager {
                 + "\n Total Rent: " + Booking.totalPrice + "₹");
         LButton.setOpacity(1);
     }
-
-    public void Gallary(ActionEvent e) {
+    public void Gallary(ActionEvent e){
         Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         stage.close();
     }
