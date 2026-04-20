@@ -7,7 +7,6 @@ class Users {
     String role;
     String name;
 
-   
     Users(String u, String p, String r, String n) {
         this.username = u;
         this.password = p;

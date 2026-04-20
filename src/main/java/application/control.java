@@ -25,7 +25,6 @@ public class control {
     Stage stage;
     Scene scene;
 
-    //access system
     @FXML
     TextField Username;
     @FXML
@@ -87,7 +86,7 @@ public class control {
 
         if ("admin".equals(Role.role)) {
 
-            switchScene(e, "/Admin.fxml", "Admin Panel", "/application.css");
+            switchScene(e, "/User.fxml", "Admin Panel", "/application.css");
         } else {
 
             switchScene(e, "/User.fxml", "User Panel", "/application.css");

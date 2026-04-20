@@ -1,6 +1,7 @@
 package application;
 
-class Truck{
+class Truck {
+
     String id;
     String model;
     int pricePerDay;
