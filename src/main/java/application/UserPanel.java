@@ -62,7 +62,9 @@ public class UserPanel extends control {
                             car.model,
                             car.pricePerDay,
                             car.status,
-                            car.id
+                            car.id,
+                            car.currentRenter
+
                     );
                     Tile.getChildren().add(card);
                 }
@@ -74,7 +76,9 @@ public class UserPanel extends control {
                             truck.model,
                             truck.pricePerDay,
                             truck.status,
-                            truck.id
+                            truck.id,
+                            truck.currentRenter
+
                     );
                     Tile.getChildren().add(card);
                 }
@@ -86,7 +90,8 @@ public class UserPanel extends control {
                             bike.model,
                             bike.pricePerDay,
                             bike.status,
-                            bike.id
+                            bike.id,
+                            bike.currentRenter
                     );
                     Tile.getChildren().add(card);
                 }
@@ -95,7 +100,7 @@ public class UserPanel extends control {
     }
 
     // Common card for all vehicles
-    private VBox createCard(String model, int price, String status, String id) {
+    private VBox createCard(String model, int price, String status, String id, String currentRenter) {
 
         Label modelLabel = new Label("Model: " + model);
         Label priceLabel = new Label("Price/Day: ₹" + price);
@@ -110,7 +115,8 @@ public class UserPanel extends control {
         returnBtn.setVisible(false);
         returnBtn.setManaged(false);
 
-        if ("Booked".equals(status)) {
+        String loggedInUser = Session.currentUser != null ? Session.currentUser.name : null;
+        if ("Booked".equals(status) && loggedInUser != null && loggedInUser.equals(currentRenter)) {
             returnBtn.setVisible(true);
             returnBtn.setManaged(true);
         }

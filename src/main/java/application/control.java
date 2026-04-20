@@ -44,12 +44,21 @@ public class control {
         try{
         Root = loadFXML(FXMLFile);
         }catch(IOException i){
-            System.err.println("File not found");
+            System.err.println("Failed to load FXML: " + FXMLFile + " -> " + i.getMessage());
+            return;
         }catch(RuntimeException r){
-            System.err.println("Root must be not null");
+            System.err.println("Runtime error while loading FXML: " + FXMLFile + " -> " + r.getMessage());
+            return;
         }catch(Exception d){
-            System.err.println("Error!!");
+            System.err.println("Unexpected error while switching scene: " + d.getMessage());
+            return;
         }
+
+        if (Root == null) {
+            System.err.println("Failed to switch scene because root is null for " + FXMLFile);
+            return;
+        }
+
         stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         scene = new Scene(Root);
 
