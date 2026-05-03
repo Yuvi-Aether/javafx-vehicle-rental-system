@@ -19,7 +19,7 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-public class UserPanel extends control {
+public class UserPanel extends Controller {
 
     String Choices[] = {"Car", "Truck", "Bike"};
 
