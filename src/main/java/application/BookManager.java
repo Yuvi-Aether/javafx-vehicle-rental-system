@@ -11,25 +11,25 @@ import javafx.stage.Stage;
 public class BookManager {
 
     @FXML
-    Label bLabel;
+    Label TitleLabel;
     @FXML
-    Label rLabel;
+    Label BookLabel;
     @FXML
     DatePicker StDate;
     @FXML
     DatePicker EndDate;
     @FXML
-    Button rButton;
+    Button BookButton;
     @FXML
-    Button LButton;
+    Button GalleryButton;
 
     Vehicles vehicles = Session.vehicles;
 
     public void initialize() {
-        bLabel.setWrapText(true);
-        bLabel.setMaxWidth(Double.MAX_VALUE);
-        bLabel.setStyle("-fx-font-size: 20px; -fx-text-fill: white; -fx-font-weight: bold;");
-        bLabel.setText("Vehicle Id: " + Booking.vehicleId
+        TitleLabel.setWrapText(true);
+        TitleLabel.setMaxWidth(Double.MAX_VALUE);
+        TitleLabel.setStyle("-fx-font-size: 20px; -fx-text-fill: white; -fx-font-weight: bold;");
+        TitleLabel.setText("Vehicle Id: " + Booking.vehicleId
                 + "\nVehicle Model: " + Booking.VehicleName
                 + "\nPrice per Day: " + Booking.priceperday);
         StDate.setValue(java.time.LocalDate.now());
@@ -49,9 +49,9 @@ public class BookManager {
             }
         });
 
-        rLabel.setWrapText(true);
-        rLabel.setMaxWidth(Double.MAX_VALUE);
-        rLabel.setStyle("-fx-font-size: 16px; -fx-text-fill: white; -fx-font-weight: bold;");
+        BookLabel.setWrapText(true);
+        BookLabel.setMaxWidth(Double.MAX_VALUE);
+        BookLabel.setStyle("-fx-font-size: 16px; -fx-text-fill: white; -fx-font-weight: bold;");
 
     }
 
@@ -66,17 +66,17 @@ public class BookManager {
         System.err.println("Booking Confirmed for " + Booking.VehicleName);
         System.err.println("Total Price: " + Booking.totalPrice);
 
-        rButton.setDisable(true);
-        rLabel.setOpacity(1);
-        rLabel.setText(Booking.username
+        BookButton.setDisable(true);
+        BookLabel.setOpacity(1);
+        BookLabel.setText(Booking.username
                 + "\n Vehicle: " + Booking.VehicleName
                 + "\n From - " + Booking.startDate
                 + "\n To - " + Booking.endDate
                 + "\n Total Rent: " + Booking.totalPrice + "₹");
-        LButton.setOpacity(1);
+        GalleryButton.setOpacity(1);
     }
 
-    public void Gallary(ActionEvent e) {
+    public void Gallery(ActionEvent e) {
         Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         stage.close();
     }

@@ -9,7 +9,7 @@
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="720.0" spacing="16.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BookManager">
    <children>
-      <Label fx:id="bLabel" maxWidth="680.0" styleClass="title" text="Label" wrapText="true">
+      <Label fx:id="TitleLabel" maxWidth="680.0" styleClass="title" text="Label" wrapText="true">
          <opaqueInsets>
             <Insets left="25.0" />
          </opaqueInsets></Label>
@@ -27,15 +27,15 @@
                </opaqueInsets></DatePicker>
          </children>
       </HBox>
-      <HBox  prefHeight="100.0" prefWidth="680.0" spacing="16.0">
+      <HBox prefHeight="100.0" prefWidth="680.0" spacing="16.0">
          <children>
-            <Button fx:id="rButton" mnemonicParsing="false" onAction="#Hello" styleClass="mclaren-button" text="Book" />
-            <Label fx:id="rLabel" opacity="0.0" prefHeight="100.0" prefWidth="518.0" styleClass="title" text="Summery" wrapText="true">
+            <Button fx:id="BookButton" mnemonicParsing="false" onAction="#Hello" styleClass="mclaren-button" text="Book" />
+            <Label fx:id="BookLabel" opacity="0.0" prefHeight="100.0" prefWidth="518.0" styleClass="title" text="Summery" wrapText="true">
                <opaqueInsets>
                   <Insets left="80.0" />
                </opaqueInsets></Label>
          </children>
       </HBox>
-      <Button fx:id="LButton" alignment="CENTER" mnemonicParsing="false" onAction="#Gallary" opacity="0.0" styleClass="mclaren-button" text="Gallary" />
+      <Button fx:id="GalleryButton" alignment="CENTER" mnemonicParsing="false" onAction="#Gallery" opacity="0.0" styleClass="mclaren-button" text="Gallary" />
    </children>
 </VBox>

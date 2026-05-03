@@ -16,7 +16,7 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class control {
+public class Controller {
 
     @FXML
     VBox vBox;
